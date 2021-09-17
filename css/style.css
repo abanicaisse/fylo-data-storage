@@ -109,7 +109,6 @@ main {
     border-radius: 50%;
     position: absolute;
     top: .25rem;
-    /* bottom: 5rem; */
     right: 18.5%;
 }
 
@@ -121,6 +120,8 @@ main {
 .data > div + div + div {
     color: var(--grayish-blue);
     background-color: white;
+    display: flex;
+    justify-content: center;
     position: absolute;
     left: 20%;
     right: 20%;
@@ -129,7 +130,6 @@ main {
     border-radius: .5rem;
     padding: 1rem;
     margin-top: 1rem;
-
 }
 
 .data > div + div + div > p {
@@ -161,5 +161,57 @@ main {
         width: 100%;
         flex-direction: column;
         justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        background-color: var(--darker-blue);
+        background-image: url('../assets/images/bg-desktop.png');
+        background-repeat: no-repeat;
+        background-size: 100% 50%;
+        background-position: bottom center;
+    }
+
+    main {
+        width: min(85%, 75rem);
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .logo {
+        width: 35%;
+        border-top-right-radius: 40%;
+    }
+
+    .data {
+        width: 70%;
+        text-align: left;
+        padding-top: 3rem;
+    }
+
+    .data > div > label > p {
+        text-align: left;
+    }
+
+    .data > div + div + div {
+        width: 30%;
+        position: absolute;
+        top: -40%;
+        left: 60%;
+        border-bottom-right-radius: 0;
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+
+    .data > div + div + div::before {
+        content: '';
+        background-color: white;
+        border-bottom: 30px solid var(--dark-blue);
+        border-right: 30px solid white;
+        position: absolute;
+        top: 100%;
+        right: 0%;
     }
 }
